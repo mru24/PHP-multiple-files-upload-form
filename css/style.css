@@ -28,16 +28,21 @@ body #demo form .title {
   padding-bottom: 10px;
 }
 
-body #demo form input, body #demo form label {
+body #demo form select, body #demo form input, body #demo form label {
   width: 100%;
   margin-bottom: 10px;
+}
+
+body #demo form select {
+  height: 30px;
+  text-transform: capitalize;
 }
 
 body #demo form button {
   display: block;
   margin: auto;
   margin-top: 30px;
-  padding: 10px 20px;
+  padding: 15px 30px;
   border: none;
   border-radius: 5px;
   background: #f05d00;
@@ -50,11 +55,42 @@ body #demo form button:hover {
   background: #fc7c2b;
 }
 
+.success, .fail {
+  border-radius: 5px;
+  color: white;
+  text-align: center;
+  width: 90%;
+  margin: auto;
+  position: relative;
+  animation: fadeIn .7s;
+}
+
+.success {
+  background: #078c00;
+  border: 3px solid #068100;
+}
+
+.fail {
+  background: #b80000;
+  border: 3px solid #9f0000;
+}
+
 @media only screen and (max-width: 900px) {
   body #demo {
     width: 95%;
   }
   body #demo form {
     width: 95%;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    top: 50px;
+  }
+  to {
+    opacity: 1;
+    top: 0;
   }
 }
